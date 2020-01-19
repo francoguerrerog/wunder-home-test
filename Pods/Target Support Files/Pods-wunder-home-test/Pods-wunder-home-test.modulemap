@@ -1,0 +1,6 @@
+framework module Pods_wunder_home_test {
+  umbrella header "Pods-wunder-home-test-umbrella.h"
+
+  export *
+  module * { export * }
+}

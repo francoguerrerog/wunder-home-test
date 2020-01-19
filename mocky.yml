@@ -1,0 +1,13 @@
+sources:
+  include:
+    - ./wunder-home-test
+    - ./wunder-home-testTests
+templates:
+  - ./Pods/SwiftyMocky/Sources/Templates
+output:
+  ./wunder-home-testTests
+args:
+  testable:
+  - wunder_home_test
+  import:
+  - RxSwift

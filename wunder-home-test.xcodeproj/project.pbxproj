@@ -1,0 +1,771 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26F4CD89DD7A607048DAD9DE /* Pods_wunder_home_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19BD799C6BAD4DFC4EA3B19A /* Pods_wunder_home_test.framework */; };
+		2DC3CC3723D26E1E00EEAD2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CC3623D26E1E00EEAD2B /* AppDelegate.swift */; };
+		2DC3CC3923D26E1E00EEAD2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CC3823D26E1E00EEAD2B /* SceneDelegate.swift */; };
+		2DC3CC4023D26E2000EEAD2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DC3CC3F23D26E2000EEAD2B /* Assets.xcassets */; };
+		2DC3CC4323D26E2000EEAD2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DC3CC4123D26E2000EEAD2B /* LaunchScreen.storyboard */; };
+		2DC3CC6E23D3BB3800EEAD2B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CC6A23D3BB3800EEAD2B /* MainViewController.swift */; };
+		2DC3CC6F23D3BB3800EEAD2B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CC6B23D3BB3800EEAD2B /* MainView.swift */; };
+		2DC3CC7023D3BB3800EEAD2B /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CC6C23D3BB3800EEAD2B /* MainViewModel.swift */; };
+		2DC3CC7123D3BB3800EEAD2B /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DC3CC6D23D3BB3800EEAD2B /* MainView.xib */; };
+		2DC3CC7E23D4901200EEAD2B /* PlaceMarksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CC7D23D4901200EEAD2B /* PlaceMarksService.swift */; };
+		2DC3CC8023D4909200EEAD2B /* PlaceMarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CC7F23D4909200EEAD2B /* PlaceMarks.swift */; };
+		2DC3CC8323D4910700EEAD2B /* PlaceMarksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CC8223D4910700EEAD2B /* PlaceMarksRepository.swift */; };
+		2DC3CC8623D4915800EEAD2B /* ApiPlaceMarksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CC8523D4915800EEAD2B /* ApiPlaceMarksService.swift */; };
+		2DC3CC8923D4926500EEAD2B /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CC8823D4926500EEAD2B /* ApiError.swift */; };
+		2DC3CC8C23D4930F00EEAD2B /* PlaceMarksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CC8B23D4930F00EEAD2B /* PlaceMarksResponse.swift */; };
+		2DC3CC9023D4BEA000EEAD2B /* GetPlaceMarksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CC8F23D4BEA000EEAD2B /* GetPlaceMarksTests.swift */; };
+		2DC3CC9223D4C0D800EEAD2B /* Mock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CC9123D4C0D800EEAD2B /* Mock.generated.swift */; };
+		2DC3CC9523D4C53C00EEAD2B /* PlaceMarksServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CC9423D4C53C00EEAD2B /* PlaceMarksServiceMock.swift */; };
+		2DC3CC9723D4C56300EEAD2B /* GetPlaceMarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CC9623D4C56300EEAD2B /* GetPlaceMarks.swift */; };
+		2DC3CC9923D4C62D00EEAD2B /* PlaceMarksRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CC9823D4C62D00EEAD2B /* PlaceMarksRepositoryMock.swift */; };
+		2DC3CC9B23D4C93700EEAD2B /* InMemoryPlaceMarksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CC9A23D4C93700EEAD2B /* InMemoryPlaceMarksRepository.swift */; };
+		2DC3CC9D23D4CA2700EEAD2B /* PlaceMarkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CC9C23D4CA2700EEAD2B /* PlaceMarkResponse.swift */; };
+		2DC3CC9F23D4CE0F00EEAD2B /* PlaceMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CC9E23D4CE0F00EEAD2B /* PlaceMark.swift */; };
+		2DC3CCA123D4CE2000EEAD2B /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CCA023D4CE2000EEAD2B /* Coordinate.swift */; };
+		8D77BB181B84144FC3546F72 /* Pods_wunder_home_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBC9A8E4BFE12269F42F0F83 /* Pods_wunder_home_testTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2DC3CC4A23D26E2000EEAD2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DC3CC2B23D26E1E00EEAD2B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DC3CC3223D26E1E00EEAD2B;
+			remoteInfo = "wunder-home-test";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07FD47F3F2C1FE92A885BAAE /* Pods-wunder-home-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wunder-home-testTests.release.xcconfig"; path = "Target Support Files/Pods-wunder-home-testTests/Pods-wunder-home-testTests.release.xcconfig"; sourceTree = "<group>"; };
+		15C94C51CBCA97F4F5EB4087 /* Pods-wunder-home-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wunder-home-test.debug.xcconfig"; path = "Target Support Files/Pods-wunder-home-test/Pods-wunder-home-test.debug.xcconfig"; sourceTree = "<group>"; };
+		19BD799C6BAD4DFC4EA3B19A /* Pods_wunder_home_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wunder_home_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DC3CC3323D26E1E00EEAD2B /* wunder-home-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wunder-home-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DC3CC3623D26E1E00EEAD2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2DC3CC3823D26E1E00EEAD2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2DC3CC3F23D26E2000EEAD2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2DC3CC4223D26E2000EEAD2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2DC3CC4423D26E2000EEAD2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DC3CC4923D26E2000EEAD2B /* wunder-home-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "wunder-home-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DC3CC4F23D26E2000EEAD2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DC3CC6A23D3BB3800EEAD2B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2DC3CC6B23D3BB3800EEAD2B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		2DC3CC6C23D3BB3800EEAD2B /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		2DC3CC6D23D3BB3800EEAD2B /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		2DC3CC7D23D4901200EEAD2B /* PlaceMarksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarksService.swift; sourceTree = "<group>"; };
+		2DC3CC7F23D4909200EEAD2B /* PlaceMarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarks.swift; sourceTree = "<group>"; };
+		2DC3CC8223D4910700EEAD2B /* PlaceMarksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarksRepository.swift; sourceTree = "<group>"; };
+		2DC3CC8523D4915800EEAD2B /* ApiPlaceMarksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPlaceMarksService.swift; sourceTree = "<group>"; };
+		2DC3CC8823D4926500EEAD2B /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		2DC3CC8B23D4930F00EEAD2B /* PlaceMarksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarksResponse.swift; sourceTree = "<group>"; };
+		2DC3CC8F23D4BEA000EEAD2B /* GetPlaceMarksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaceMarksTests.swift; sourceTree = "<group>"; };
+		2DC3CC9123D4C0D800EEAD2B /* Mock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.generated.swift; sourceTree = "<group>"; };
+		2DC3CC9423D4C53C00EEAD2B /* PlaceMarksServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarksServiceMock.swift; sourceTree = "<group>"; };
+		2DC3CC9623D4C56300EEAD2B /* GetPlaceMarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaceMarks.swift; sourceTree = "<group>"; };
+		2DC3CC9823D4C62D00EEAD2B /* PlaceMarksRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarksRepositoryMock.swift; sourceTree = "<group>"; };
+		2DC3CC9A23D4C93700EEAD2B /* InMemoryPlaceMarksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryPlaceMarksRepository.swift; sourceTree = "<group>"; };
+		2DC3CC9C23D4CA2700EEAD2B /* PlaceMarkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarkResponse.swift; sourceTree = "<group>"; };
+		2DC3CC9E23D4CE0F00EEAD2B /* PlaceMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMark.swift; sourceTree = "<group>"; };
+		2DC3CCA023D4CE2000EEAD2B /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		2F157F505FCF58707BAF372D /* Pods-wunder-home-testTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wunder-home-testTests.debug.xcconfig"; path = "Target Support Files/Pods-wunder-home-testTests/Pods-wunder-home-testTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B323C44AF33EC429C3DB6022 /* Pods-wunder-home-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wunder-home-test.release.xcconfig"; path = "Target Support Files/Pods-wunder-home-test/Pods-wunder-home-test.release.xcconfig"; sourceTree = "<group>"; };
+		BBC9A8E4BFE12269F42F0F83 /* Pods_wunder_home_testTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wunder_home_testTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2DC3CC3023D26E1E00EEAD2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26F4CD89DD7A607048DAD9DE /* Pods_wunder_home_test.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DC3CC4623D26E2000EEAD2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D77BB181B84144FC3546F72 /* Pods_wunder_home_testTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22A4DDFF47D4EAB76104E221 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				15C94C51CBCA97F4F5EB4087 /* Pods-wunder-home-test.debug.xcconfig */,
+				B323C44AF33EC429C3DB6022 /* Pods-wunder-home-test.release.xcconfig */,
+				2F157F505FCF58707BAF372D /* Pods-wunder-home-testTests.debug.xcconfig */,
+				07FD47F3F2C1FE92A885BAAE /* Pods-wunder-home-testTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		2DC3CC2A23D26E1E00EEAD2B = {
+			isa = PBXGroup;
+			children = (
+				2DC3CC3523D26E1E00EEAD2B /* wunder-home-test */,
+				2DC3CC4C23D26E2000EEAD2B /* wunder-home-testTests */,
+				2DC3CC3423D26E1E00EEAD2B /* Products */,
+				22A4DDFF47D4EAB76104E221 /* Pods */,
+				8EF6DA31A3D289AFC4B2488C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2DC3CC3423D26E1E00EEAD2B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2DC3CC3323D26E1E00EEAD2B /* wunder-home-test.app */,
+				2DC3CC4923D26E2000EEAD2B /* wunder-home-testTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2DC3CC3523D26E1E00EEAD2B /* wunder-home-test */ = {
+			isa = PBXGroup;
+			children = (
+				2DC3CC7723D3C7A500EEAD2B /* Presentation */,
+				2DC3CC7623D3C79D00EEAD2B /* Infrastructure */,
+				2DC3CC7323D3C77C00EEAD2B /* Domain */,
+				2DC3CC3623D26E1E00EEAD2B /* AppDelegate.swift */,
+				2DC3CC3823D26E1E00EEAD2B /* SceneDelegate.swift */,
+				2DC3CC3F23D26E2000EEAD2B /* Assets.xcassets */,
+				2DC3CC4123D26E2000EEAD2B /* LaunchScreen.storyboard */,
+				2DC3CC4423D26E2000EEAD2B /* Info.plist */,
+				2DC3CC6A23D3BB3800EEAD2B /* MainViewController.swift */,
+				2DC3CC6B23D3BB3800EEAD2B /* MainView.swift */,
+				2DC3CC6C23D3BB3800EEAD2B /* MainViewModel.swift */,
+				2DC3CC6D23D3BB3800EEAD2B /* MainView.xib */,
+			);
+			path = "wunder-home-test";
+			sourceTree = "<group>";
+		};
+		2DC3CC4C23D26E2000EEAD2B /* wunder-home-testTests */ = {
+			isa = PBXGroup;
+			children = (
+				2DC3CC9123D4C0D800EEAD2B /* Mock.generated.swift */,
+				2DC3CC9323D4C52F00EEAD2B /* Doubles */,
+				2DC3CC8D23D4BE7400EEAD2B /* Domain */,
+				2DC3CC4F23D26E2000EEAD2B /* Info.plist */,
+			);
+			path = "wunder-home-testTests";
+			sourceTree = "<group>";
+		};
+		2DC3CC7323D3C77C00EEAD2B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2DC3CC8123D490DC00EEAD2B /* Repositories */,
+				2DC3CC7C23D48FC400EEAD2B /* Services */,
+				2DC3CC7923D48E9100EEAD2B /* Entities */,
+				2DC3CC7823D48E8400EEAD2B /* Actions */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2DC3CC7623D3C79D00EEAD2B /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				2DC3CC8A23D492FB00EEAD2B /* Responses */,
+				2DC3CC8723D4925B00EEAD2B /* Entities */,
+				2DC3CC8423D4914500EEAD2B /* Services */,
+				2DC3CC7A23D48EB400EEAD2B /* Repositories */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		2DC3CC7723D3C7A500EEAD2B /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2DC3CC7B23D48EFE00EEAD2B /* CarLists */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2DC3CC7823D48E8400EEAD2B /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				2DC3CC9623D4C56300EEAD2B /* GetPlaceMarks.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		2DC3CC7923D48E9100EEAD2B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				2DC3CC7F23D4909200EEAD2B /* PlaceMarks.swift */,
+				2DC3CC9E23D4CE0F00EEAD2B /* PlaceMark.swift */,
+				2DC3CCA023D4CE2000EEAD2B /* Coordinate.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		2DC3CC7A23D48EB400EEAD2B /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				2DC3CC9A23D4C93700EEAD2B /* InMemoryPlaceMarksRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		2DC3CC7B23D48EFE00EEAD2B /* CarLists */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CarLists;
+			sourceTree = "<group>";
+		};
+		2DC3CC7C23D48FC400EEAD2B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2DC3CC7D23D4901200EEAD2B /* PlaceMarksService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2DC3CC8123D490DC00EEAD2B /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				2DC3CC8223D4910700EEAD2B /* PlaceMarksRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		2DC3CC8423D4914500EEAD2B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2DC3CC8523D4915800EEAD2B /* ApiPlaceMarksService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2DC3CC8723D4925B00EEAD2B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				2DC3CC8823D4926500EEAD2B /* ApiError.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		2DC3CC8A23D492FB00EEAD2B /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				2DC3CC8B23D4930F00EEAD2B /* PlaceMarksResponse.swift */,
+				2DC3CC9C23D4CA2700EEAD2B /* PlaceMarkResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		2DC3CC8D23D4BE7400EEAD2B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2DC3CC8E23D4BE7B00EEAD2B /* Actions */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2DC3CC8E23D4BE7B00EEAD2B /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				2DC3CC8F23D4BEA000EEAD2B /* GetPlaceMarksTests.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		2DC3CC9323D4C52F00EEAD2B /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				2DC3CC9423D4C53C00EEAD2B /* PlaceMarksServiceMock.swift */,
+				2DC3CC9823D4C62D00EEAD2B /* PlaceMarksRepositoryMock.swift */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		8EF6DA31A3D289AFC4B2488C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19BD799C6BAD4DFC4EA3B19A /* Pods_wunder_home_test.framework */,
+				BBC9A8E4BFE12269F42F0F83 /* Pods_wunder_home_testTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2DC3CC3223D26E1E00EEAD2B /* wunder-home-test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DC3CC5223D26E2000EEAD2B /* Build configuration list for PBXNativeTarget "wunder-home-test" */;
+			buildPhases = (
+				D04D4322954881DCE504483A /* [CP] Check Pods Manifest.lock */,
+				2DC3CC2F23D26E1E00EEAD2B /* Sources */,
+				2DC3CC3023D26E1E00EEAD2B /* Frameworks */,
+				2DC3CC3123D26E1E00EEAD2B /* Resources */,
+				CBBCB2D3F3FA7E804E921101 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "wunder-home-test";
+			productName = "wunder-home-test";
+			productReference = 2DC3CC3323D26E1E00EEAD2B /* wunder-home-test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2DC3CC4823D26E2000EEAD2B /* wunder-home-testTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DC3CC5523D26E2000EEAD2B /* Build configuration list for PBXNativeTarget "wunder-home-testTests" */;
+			buildPhases = (
+				56AE2D2D77EFB7CD707F9BDB /* [CP] Check Pods Manifest.lock */,
+				2DC3CC4523D26E2000EEAD2B /* Sources */,
+				2DC3CC4623D26E2000EEAD2B /* Frameworks */,
+				2DC3CC4723D26E2000EEAD2B /* Resources */,
+				B92011AFB54CFEA7B3290854 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DC3CC4B23D26E2000EEAD2B /* PBXTargetDependency */,
+			);
+			name = "wunder-home-testTests";
+			productName = "wunder-home-testTests";
+			productReference = 2DC3CC4923D26E2000EEAD2B /* wunder-home-testTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2DC3CC2B23D26E1E00EEAD2B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Francisco Guerrero";
+				TargetAttributes = {
+					2DC3CC3223D26E1E00EEAD2B = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					2DC3CC4823D26E2000EEAD2B = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 2DC3CC3223D26E1E00EEAD2B;
+					};
+				};
+			};
+			buildConfigurationList = 2DC3CC2E23D26E1E00EEAD2B /* Build configuration list for PBXProject "wunder-home-test" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2DC3CC2A23D26E1E00EEAD2B;
+			productRefGroup = 2DC3CC3423D26E1E00EEAD2B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2DC3CC3223D26E1E00EEAD2B /* wunder-home-test */,
+				2DC3CC4823D26E2000EEAD2B /* wunder-home-testTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2DC3CC3123D26E1E00EEAD2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DC3CC4323D26E2000EEAD2B /* LaunchScreen.storyboard in Resources */,
+				2DC3CC7123D3BB3800EEAD2B /* MainView.xib in Resources */,
+				2DC3CC4023D26E2000EEAD2B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DC3CC4723D26E2000EEAD2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		56AE2D2D77EFB7CD707F9BDB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-wunder-home-testTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B92011AFB54CFEA7B3290854 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wunder-home-testTests/Pods-wunder-home-testTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wunder-home-testTests/Pods-wunder-home-testTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-wunder-home-testTests/Pods-wunder-home-testTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBBCB2D3F3FA7E804E921101 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wunder-home-test/Pods-wunder-home-test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wunder-home-test/Pods-wunder-home-test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-wunder-home-test/Pods-wunder-home-test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D04D4322954881DCE504483A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-wunder-home-test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2DC3CC2F23D26E1E00EEAD2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DC3CC8323D4910700EEAD2B /* PlaceMarksRepository.swift in Sources */,
+				2DC3CC7E23D4901200EEAD2B /* PlaceMarksService.swift in Sources */,
+				2DC3CC3723D26E1E00EEAD2B /* AppDelegate.swift in Sources */,
+				2DC3CCA123D4CE2000EEAD2B /* Coordinate.swift in Sources */,
+				2DC3CC8923D4926500EEAD2B /* ApiError.swift in Sources */,
+				2DC3CC3923D26E1E00EEAD2B /* SceneDelegate.swift in Sources */,
+				2DC3CC9723D4C56300EEAD2B /* GetPlaceMarks.swift in Sources */,
+				2DC3CC8C23D4930F00EEAD2B /* PlaceMarksResponse.swift in Sources */,
+				2DC3CC9F23D4CE0F00EEAD2B /* PlaceMark.swift in Sources */,
+				2DC3CC8623D4915800EEAD2B /* ApiPlaceMarksService.swift in Sources */,
+				2DC3CC6F23D3BB3800EEAD2B /* MainView.swift in Sources */,
+				2DC3CC9D23D4CA2700EEAD2B /* PlaceMarkResponse.swift in Sources */,
+				2DC3CC9B23D4C93700EEAD2B /* InMemoryPlaceMarksRepository.swift in Sources */,
+				2DC3CC6E23D3BB3800EEAD2B /* MainViewController.swift in Sources */,
+				2DC3CC8023D4909200EEAD2B /* PlaceMarks.swift in Sources */,
+				2DC3CC7023D3BB3800EEAD2B /* MainViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DC3CC4523D26E2000EEAD2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DC3CC9523D4C53C00EEAD2B /* PlaceMarksServiceMock.swift in Sources */,
+				2DC3CC9223D4C0D800EEAD2B /* Mock.generated.swift in Sources */,
+				2DC3CC9923D4C62D00EEAD2B /* PlaceMarksRepositoryMock.swift in Sources */,
+				2DC3CC9023D4BEA000EEAD2B /* GetPlaceMarksTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2DC3CC4B23D26E2000EEAD2B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DC3CC3223D26E1E00EEAD2B /* wunder-home-test */;
+			targetProxy = 2DC3CC4A23D26E2000EEAD2B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2DC3CC4123D26E2000EEAD2B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DC3CC4223D26E2000EEAD2B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2DC3CC5023D26E2000EEAD2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2DC3CC5123D26E2000EEAD2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2DC3CC5323D26E2000EEAD2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15C94C51CBCA97F4F5EB4087 /* Pods-wunder-home-test.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E3GM97CH7R;
+				INFOPLIST_FILE = "wunder-home-test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "francoguerrerog.wunder-home-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2DC3CC5423D26E2000EEAD2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B323C44AF33EC429C3DB6022 /* Pods-wunder-home-test.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E3GM97CH7R;
+				INFOPLIST_FILE = "wunder-home-test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "francoguerrerog.wunder-home-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2DC3CC5623D26E2000EEAD2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F157F505FCF58707BAF372D /* Pods-wunder-home-testTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E3GM97CH7R;
+				INFOPLIST_FILE = "wunder-home-testTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "francoguerrerog.wunder-home-testTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wunder-home-test.app/wunder-home-test";
+			};
+			name = Debug;
+		};
+		2DC3CC5723D26E2000EEAD2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07FD47F3F2C1FE92A885BAAE /* Pods-wunder-home-testTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E3GM97CH7R;
+				INFOPLIST_FILE = "wunder-home-testTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "francoguerrerog.wunder-home-testTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wunder-home-test.app/wunder-home-test";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2DC3CC2E23D26E1E00EEAD2B /* Build configuration list for PBXProject "wunder-home-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DC3CC5023D26E2000EEAD2B /* Debug */,
+				2DC3CC5123D26E2000EEAD2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DC3CC5223D26E2000EEAD2B /* Build configuration list for PBXNativeTarget "wunder-home-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DC3CC5323D26E2000EEAD2B /* Debug */,
+				2DC3CC5423D26E2000EEAD2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DC3CC5523D26E2000EEAD2B /* Build configuration list for PBXNativeTarget "wunder-home-testTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DC3CC5623D26E2000EEAD2B /* Debug */,
+				2DC3CC5723D26E2000EEAD2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2DC3CC2B23D26E1E00EEAD2B /* Project object */;
+}
