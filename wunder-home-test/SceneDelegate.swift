@@ -19,12 +19,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let viewModel = MainViewModel(apiService: ApiPlaceMarksService())
-        let viewController = MainViewController(viewModel: viewModel)
-        
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = viewController
+        let coordinator = CoordinatorDefault(window: window!)
+        coordinator.start()
         window?.makeKeyAndVisible()
     }
 

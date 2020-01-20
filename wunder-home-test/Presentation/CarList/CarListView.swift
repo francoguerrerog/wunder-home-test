@@ -1,7 +1,7 @@
 
 import UIKit
 
-class MainView: UIView {
+class CarListView: UIView {
 
     static func initFromNib(owner: Any? = nil, options: [UINib.OptionsKey : Any]? = nil) -> Self {
         

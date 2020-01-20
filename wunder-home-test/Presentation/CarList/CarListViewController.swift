@@ -1,12 +1,12 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class CarListViewController: UIViewController {
     
-    private let viewModel: MainViewModel
-    private lazy var mainView = MainView.initFromNib()
+    private let viewModel: CarListViewModel
+    private lazy var mainView = CarListView.initFromNib()
 
-    init(viewModel: MainViewModel) {
+    init(viewModel: CarListViewModel) {
         self.viewModel = viewModel
         super.init(nibName: .none, bundle: .none)
     }
@@ -21,7 +21,6 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         bindViewModel()
-        viewModel.viewDidLoad()
     }
 
     private func bindViewModel() {

@@ -1,18 +1,16 @@
 import XCTest
-import RxSwift
-import RxBlocking
 import SwiftyMocky
 
 @testable import wunder_home_test
 
 class GetPlaceMarksTests: XCTestCase {
     
-    private let placeMarksService = PlaceMarksServiceMock()
-    private let placeMarkRepository = PlaceMarksRepositoryMock()
+    private let placeMarksRepository = PlaceMarksRepositoryMock()
     private var getPlaceMarks: GetPlaceMarksDefault!
-    private var result: MaterializedSequenceResult<PlaceMarks>!
+    private var result: PlaceMarks!
     
     func test_getPlaceMarks() {
+        givenPlaceMarks()
         givenAnAction()
         
         whenExecute()
@@ -20,38 +18,37 @@ class GetPlaceMarksTests: XCTestCase {
         thenRetreivePlaceMarks()
     }
     
-    func test_savePlaceMarks() {
+    func test_errorWhenNoPlaceMarksAvailable() {
+        givenNoPlaceMarks()
         givenAnAction()
         
-        whenExecute()
-        
-        thenSavePlaceMarks()
+        do {
+            result = try getPlaceMarks.execute()
+            XCTFail()
+        } catch {
+            Verify(placeMarksRepository, .once, .find())
+        }
+    }
+    
+    private func givenPlaceMarks() {
+        Given(placeMarksRepository, .find(willReturn: PlaceMarks(placeMarks: [])))
+    }
+    
+    private func givenNoPlaceMarks() {
+        Given(placeMarksRepository, .find(willReturn: nil))
     }
     
     private func givenAnAction() {
-        Given(placeMarksService, .find(willReturn: .just(PlaceMarks(placeMarks: []))))
-        getPlaceMarks = GetPlaceMarksDefault(placeMarksService, placeMarkRepository)
+        
+        getPlaceMarks = GetPlaceMarksDefault(placeMarksRepository)
     }
     
     private func whenExecute() {
-        result = getPlaceMarks.execute().toBlocking().materialize()
+        result = try! getPlaceMarks.execute()
     }
     
     private func thenRetreivePlaceMarks() {
-        switch result {
-        case .completed:
-            Verify(placeMarksService, .once, .find())
-        default:
-            XCTFail()
-        }
-    }
-    
-    private func thenSavePlaceMarks() {
-        switch result {
-        case .completed:
-            Verify(placeMarkRepository, .once, .put(.any))
-        default:
-            XCTFail()
-        }
+        Verify(placeMarksRepository, .once, .find())
     }
 }
+
