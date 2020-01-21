@@ -5,11 +5,10 @@ import RxTest
 
 @testable import wunder_home_test
 
-class CarListViewModelTests: XCTestCase {
+class CarMapViewModelTests: XCTestCase {
     
-    private let findPlaceMarks = FindPlaceMarksStatusMock()
-    private let coordinator = CoordinatorMock()
-    private var viewModel: CarListViewModel!
+    private let getPlaceMakrs = GetPlaceMarksMock()
+    private var viewModel: CarMapViewModel!
     
     private var scheduler: TestScheduler!
     private var disposeBag: DisposeBag!
@@ -21,13 +20,13 @@ class CarListViewModelTests: XCTestCase {
         disposeBag = DisposeBag()
         placeMarksObserver = scheduler.createObserver([PlaceMark].self)
     }
-
-    func test_findPlaceMarksWhenDidLoad() {
+    
+    func test_getPlaceMarksWhenDidLoad() {
         givenAViewModel()
         
         whenViewDidLoad()
         
-        thenFindPlaceMarks()
+        thenGetPlaceMarks()
     }
     
     func test_emitPlaceMarks() {
@@ -38,26 +37,18 @@ class CarListViewModelTests: XCTestCase {
         
         thenEmitPlaceMarks()
     }
-    
-    func test_goToMapWhenButtonTapped() {
-        givenAViewModel()
-        
-        viewModel.mapButtonTapped()
-        
-        Verify(coordinator, .once, .goToCarMap())
-    }
-    
+
     private func givenAViewModel() {
-        Given(findPlaceMarks, .execute(willReturn: .just(PlaceMarks(placeMarks: []))))
-        viewModel = CarListViewModel(coordinator, findPlaceMarks)
+        Given(getPlaceMakrs, .execute(willReturn: PlaceMarks(placeMarks: [])))
+        viewModel = CarMapViewModel(getPlaceMakrs)
     }
     
     private func whenViewDidLoad() {
         viewModel.viewDidLoad()
     }
     
-    private func thenFindPlaceMarks() {
-        Verify(findPlaceMarks, .once, .execute())
+    private func thenGetPlaceMarks() {
+        Verify(getPlaceMakrs, .once, .execute())
     }
     
     private func thenEmitPlaceMarks() {

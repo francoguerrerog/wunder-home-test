@@ -3,7 +3,7 @@ import UIKit
 
 protocol Coordinator {
     func goToCarList()
-    func goToCarListMap()
+    func goToCarMap()
 }
 
 class CoordinatorDefault {
@@ -26,11 +26,14 @@ class CoordinatorDefault {
     }
     
     private func createCarListViewController() -> CarListViewController {
-        let placeMarksService = ApiPlaceMarksService()
-        let placeMarksRepository = InMemoryPlaceMarksRepository()
-        let findPlacesMarks = FindPlaceMarksStatusDefault(placeMarksService, placeMarksRepository)
-        let viewModel = CarListViewModel(findPlacesMarks)
+        let viewModel = ViewModelFactory.createCarListViewModel(self)
         return CarListViewController(viewModel: viewModel)
+    }
+    
+    private func createCarMapViewController() -> CarMapViewController {
+        let viewModel = ViewModelFactory.createCarMapViewModel()
+        return CarMapViewController(viewModel: viewModel)
+        
     }
     
     private func pushViewController(viewController: UIViewController) {
@@ -46,7 +49,25 @@ extension CoordinatorDefault: Coordinator {
         pushViewController(viewController: viewController)
     }
     
-    func goToCarListMap() {
+    func goToCarMap() {
+        let viewController = createCarMapViewController()
         
+        pushViewController(viewController: viewController)
+    }
+}
+
+class ViewModelFactory {
+    
+    private static let placeMarksService = ApiPlaceMarksService()
+    private static let placeMarksRepository = InMemoryPlaceMarksRepository()
+        
+    public static func createCarListViewModel(_ coordinator: Coordinator) -> CarListViewModel {
+        let findPlacesMarks = FindPlaceMarksStatusDefault(placeMarksService, placeMarksRepository)
+        return CarListViewModel(coordinator, findPlacesMarks)
+    }
+    
+    public static func createCarMapViewModel() -> CarMapViewModel {
+        let getPlaceMarks = GetPlaceMarksDefault(placeMarksRepository)
+        return CarMapViewModel(getPlaceMarks)
     }
 }

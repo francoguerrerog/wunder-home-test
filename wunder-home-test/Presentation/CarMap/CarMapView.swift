@@ -1,8 +1,9 @@
 import UIKit
+import MapKit
 
-class CarListView: UIView {
+class CarMapView: UIView {
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var mapView: MKMapView!
     
     static func initFromNib(owner: Any? = nil, options: [UINib.OptionsKey : Any]? = nil) -> Self {
         
