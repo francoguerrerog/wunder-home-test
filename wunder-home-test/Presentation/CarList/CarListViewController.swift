@@ -24,7 +24,6 @@ class CarListViewController: UIViewController {
         super.viewDidLoad()
 
         setupTableView()
-        setupNavBar()
         bindViewModel()
         viewModel.viewDidLoad()
     }
@@ -33,17 +32,18 @@ class CarListViewController: UIViewController {
         mainView.tableView.delegate = self
         mainView.tableView.register(UINib(nibName: ItemCellView.cellIdentifier, bundle: Bundle(for: type(of: self))), forCellReuseIdentifier: ItemCellView.cellIdentifier)
     }
-    
-    private func setupNavBar() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Map", style: .plain, target: self, action: #selector(addTapped))
-    }
-    
-    @objc private func addTapped(sender: UIButton) {
-        viewModel.mapButtonTapped()
-    }
 
     private func bindViewModel() {
+        bindLoading()
         bindTableView()
+    }
+    
+    private func bindLoading() {
+        viewModel.output.loading
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] (loading) in
+                self?.mainView.loadingView.isHidden = !loading
+            }).disposed(by: disposeBag)
     }
     
     private func bindTableView() {
@@ -64,5 +64,9 @@ class CarListViewController: UIViewController {
 extension CarListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.selectCard(index: indexPath.row)
     }
 }

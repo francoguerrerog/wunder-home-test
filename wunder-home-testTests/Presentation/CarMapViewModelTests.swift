@@ -7,52 +7,39 @@ import RxTest
 
 class CarMapViewModelTests: XCTestCase {
     
-    private let getPlaceMakrs = GetPlaceMarksMock()
     private var viewModel: CarMapViewModel!
-    
     private var scheduler: TestScheduler!
     private var disposeBag: DisposeBag!
     
-    private var placeMarksObserver: TestableObserver<[PlaceMark]>!
+    private let placeMark = PlaceMark(address: "address", coordinates: Coordinate(latitude: 100, longitude: 100, elevation: 0), engineType: .CE, exterior: .GOOD, fuel: 100, interior: .GOOD, name: "name", vin: "vin")
+    
+    private var placeMarkObserver: TestableObserver<PlaceMark>!
     
     override func setUp() {
         scheduler = TestScheduler(initialClock: 0)
         disposeBag = DisposeBag()
-        placeMarksObserver = scheduler.createObserver([PlaceMark].self)
-    }
-    
-    func test_getPlaceMarksWhenDidLoad() {
-        givenAViewModel()
-        
-        whenViewDidLoad()
-        
-        thenGetPlaceMarks()
+        placeMarkObserver = scheduler.createObserver(PlaceMark.self)
     }
     
     func test_emitPlaceMarks() {
         givenAViewModel()
         
-        viewModel.output.placeMarks.subscribe(placeMarksObserver).disposed(by: disposeBag)
+        viewModel.output.placeMark.subscribe(placeMarkObserver).disposed(by: disposeBag)
         whenViewDidLoad()
         
-        thenEmitPlaceMarks()
+        thenEmitPlaceMark()
     }
 
     private func givenAViewModel() {
-        Given(getPlaceMakrs, .execute(willReturn: PlaceMarks(placeMarks: [])))
-        viewModel = CarMapViewModel(getPlaceMakrs)
+        viewModel = CarMapViewModel(placeMark)
     }
     
     private func whenViewDidLoad() {
         viewModel.viewDidLoad()
     }
     
-    private func thenGetPlaceMarks() {
-        Verify(getPlaceMakrs, .once, .execute())
-    }
-    
-    private func thenEmitPlaceMarks() {
-        let events = placeMarksObserver.events
+    private func thenEmitPlaceMark() {
+        let events = placeMarkObserver.events
         XCTAssertEqual(events.count, 1)
     }
 }

@@ -4,31 +4,26 @@ import RxSwift
 class CarMapViewModel {
     
     struct Output {
-        let placeMarks: Observable<[PlaceMark]>
+        let placeMark: Observable<PlaceMark>
     }
     
-    public lazy var output = Output(placeMarks: placeMarksSubject.asObservable())
+    public lazy var output = Output(placeMark: placeMarkSubject.asObservable())
     
-    private let placeMarksSubject = PublishSubject<[PlaceMark]>()
+    private let placeMarkSubject = PublishSubject<PlaceMark>()
     
-    private let getPlaceMarks: GetPlaceMarks
+    private let placeMark: PlaceMark
     
-    init(_ getPlaceMarks: GetPlaceMarks) {
-        self.getPlaceMarks = getPlaceMarks
+    init(_ placeMark: PlaceMark) {
+        self.placeMark = placeMark
     }
     
-    private func emitPlaceMarks(_ placemarks: PlaceMarks) {
-        placeMarksSubject.onNext(placemarks.placeMarks)
+    private func emitPlaceMark(_ placemark: PlaceMark) {
+        placeMarkSubject.onNext(placemark)
     }
 }
 
 extension CarMapViewModel {
     func viewDidLoad() {
-        do {
-            let placeMarks = try getPlaceMarks.execute()
-            emitPlaceMarks(placeMarks)
-        } catch  {
-            //TODO: handle the error
-        }
+        emitPlaceMark(placeMark)
     }
 }

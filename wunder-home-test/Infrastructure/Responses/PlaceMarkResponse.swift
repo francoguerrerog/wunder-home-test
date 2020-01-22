@@ -14,7 +14,7 @@ struct PlaceMarkResponse: Codable {
         guard let exteriorStatus = PlaceMark.Status(rawValue: exterior) else { return nil }
         guard let interiorStatus = PlaceMark.Status(rawValue: interior) else { return nil }
         guard coordinates.count == 3 else { return nil }
-        let coordinate = Coordinate(latitude: coordinates[0], longitude: coordinates[1], elevation: coordinates[2])
+        let coordinate = Coordinate(latitude: coordinates[1], longitude: coordinates[0], elevation: coordinates[2])
         guard let engineTypeStatus = PlaceMark.EngineType(rawValue: engineType) else { return nil }
         
         return PlaceMark(address: address,

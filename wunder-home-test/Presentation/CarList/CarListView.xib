@@ -17,16 +17,22 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="sbn-Ky-71X">
+                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Gh3-UX-VFD" secondAttribute="bottom" id="11x-n4-com"/>
                 <constraint firstItem="Gh3-UX-VFD" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="OhG-eC-LGu"/>
                 <constraint firstItem="Gh3-UX-VFD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="f0c-Gj-WIu"/>
+                <constraint firstItem="sbn-Ky-71X" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="lLb-FL-n24"/>
+                <constraint firstItem="sbn-Ky-71X" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="sY0-iY-Nhw"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Gh3-UX-VFD" secondAttribute="trailing" id="u8K-sx-rb1"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="loadingView" destination="sbn-Ky-71X" id="hKi-cS-hAS"/>
                 <outlet property="tableView" destination="Gh3-UX-VFD" id="BTY-wn-hzs"/>
             </connections>
             <point key="canvasLocation" x="136" y="127"/>

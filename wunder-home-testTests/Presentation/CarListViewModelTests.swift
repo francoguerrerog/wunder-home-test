@@ -39,14 +39,6 @@ class CarListViewModelTests: XCTestCase {
         thenEmitPlaceMarks()
     }
     
-    func test_goToMapWhenButtonTapped() {
-        givenAViewModel()
-        
-        viewModel.mapButtonTapped()
-        
-        Verify(coordinator, .once, .goToCarMap())
-    }
-    
     private func givenAViewModel() {
         Given(findPlaceMarks, .execute(willReturn: .just(PlaceMarks(placeMarks: []))))
         viewModel = CarListViewModel(coordinator, findPlaceMarks)
@@ -62,6 +54,6 @@ class CarListViewModelTests: XCTestCase {
     
     private func thenEmitPlaceMarks() {
         let events = placeMarksObserver.events
-        XCTAssertEqual(events.count, 1)
+        XCTAssertEqual(events.count, 2)
     }
 }

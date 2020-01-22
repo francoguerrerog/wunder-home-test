@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		26F4CD89DD7A607048DAD9DE /* Pods_wunder_home_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19BD799C6BAD4DFC4EA3B19A /* Pods_wunder_home_test.framework */; };
+		2D4A10F623D7BE8700B31129 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4A10F523D7BE8700B31129 /* ViewModelFactory.swift */; };
+		2D4A10F923D7D92600B31129 /* PlaceMarkAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4A10F823D7D92600B31129 /* PlaceMarkAnnotation.swift */; };
 		2D595B0B23D661E400713659 /* CarMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D595B0723D661E400713659 /* CarMapViewController.swift */; };
 		2D595B0C23D661E400713659 /* CarMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D595B0823D661E400713659 /* CarMapView.swift */; };
 		2D595B0D23D661E400713659 /* CarMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D595B0923D661E400713659 /* CarMapViewModel.swift */; };
@@ -15,7 +17,6 @@
 		2D595B1223D6672E00713659 /* ItemCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D595B1023D6672E00713659 /* ItemCellView.swift */; };
 		2D595B1323D6672E00713659 /* ItemCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D595B1123D6672E00713659 /* ItemCellView.xib */; };
 		2D595B1523D677D200713659 /* CarMapViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D595B1423D677D200713659 /* CarMapViewModelTests.swift */; };
-		2D595B1723D67BA100713659 /* GetPlaceMarksMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D595B1623D67BA100713659 /* GetPlaceMarksMock.swift */; };
 		2D595B1923D67BD100713659 /* CoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D595B1823D67BD100713659 /* CoordinatorMock.swift */; };
 		2DC3CC3723D26E1E00EEAD2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CC3623D26E1E00EEAD2B /* AppDelegate.swift */; };
 		2DC3CC3923D26E1E00EEAD2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CC3823D26E1E00EEAD2B /* SceneDelegate.swift */; };
@@ -36,9 +37,7 @@
 		2DC3CC9D23D4CA2700EEAD2B /* PlaceMarkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CC9C23D4CA2700EEAD2B /* PlaceMarkResponse.swift */; };
 		2DC3CC9F23D4CE0F00EEAD2B /* PlaceMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CC9E23D4CE0F00EEAD2B /* PlaceMark.swift */; };
 		2DC3CCA123D4CE2000EEAD2B /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CCA023D4CE2000EEAD2B /* Coordinate.swift */; };
-		2DC3CCA323D4F7E200EEAD2B /* GetPlaceMarksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CCA223D4F7E200EEAD2B /* GetPlaceMarksTests.swift */; };
 		2DC3CCA523D500C000EEAD2B /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CCA423D500C000EEAD2B /* DomainError.swift */; };
-		2DC3CCA723D50B6100EEAD2B /* GetPlaceMarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CCA623D50B6100EEAD2B /* GetPlaceMarks.swift */; };
 		2DC3CCAA23D50DB500EEAD2B /* CarListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CCA923D50DB500EEAD2B /* CarListViewModelTests.swift */; };
 		2DC3CCAC23D5125D00EEAD2B /* FindPlaceMarksStatusMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CCAB23D5125D00EEAD2B /* FindPlaceMarksStatusMock.swift */; };
 		2DC3CCB923D520E400EEAD2B /* CarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3CCB523D520E400EEAD2B /* CarListViewController.swift */; };
@@ -63,6 +62,8 @@
 		07FD47F3F2C1FE92A885BAAE /* Pods-wunder-home-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wunder-home-testTests.release.xcconfig"; path = "Target Support Files/Pods-wunder-home-testTests/Pods-wunder-home-testTests.release.xcconfig"; sourceTree = "<group>"; };
 		15C94C51CBCA97F4F5EB4087 /* Pods-wunder-home-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wunder-home-test.debug.xcconfig"; path = "Target Support Files/Pods-wunder-home-test/Pods-wunder-home-test.debug.xcconfig"; sourceTree = "<group>"; };
 		19BD799C6BAD4DFC4EA3B19A /* Pods_wunder_home_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wunder_home_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D4A10F523D7BE8700B31129 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
+		2D4A10F823D7D92600B31129 /* PlaceMarkAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarkAnnotation.swift; sourceTree = "<group>"; };
 		2D595B0723D661E400713659 /* CarMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMapViewController.swift; sourceTree = "<group>"; };
 		2D595B0823D661E400713659 /* CarMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMapView.swift; sourceTree = "<group>"; };
 		2D595B0923D661E400713659 /* CarMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMapViewModel.swift; sourceTree = "<group>"; };
@@ -70,7 +71,6 @@
 		2D595B1023D6672E00713659 /* ItemCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCellView.swift; sourceTree = "<group>"; };
 		2D595B1123D6672E00713659 /* ItemCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCellView.xib; sourceTree = "<group>"; };
 		2D595B1423D677D200713659 /* CarMapViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMapViewModelTests.swift; sourceTree = "<group>"; };
-		2D595B1623D67BA100713659 /* GetPlaceMarksMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaceMarksMock.swift; sourceTree = "<group>"; };
 		2D595B1823D67BD100713659 /* CoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorMock.swift; sourceTree = "<group>"; };
 		2DC3CC3323D26E1E00EEAD2B /* wunder-home-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wunder-home-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DC3CC3623D26E1E00EEAD2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,9 +95,7 @@
 		2DC3CC9C23D4CA2700EEAD2B /* PlaceMarkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarkResponse.swift; sourceTree = "<group>"; };
 		2DC3CC9E23D4CE0F00EEAD2B /* PlaceMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMark.swift; sourceTree = "<group>"; };
 		2DC3CCA023D4CE2000EEAD2B /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
-		2DC3CCA223D4F7E200EEAD2B /* GetPlaceMarksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaceMarksTests.swift; sourceTree = "<group>"; };
 		2DC3CCA423D500C000EEAD2B /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
-		2DC3CCA623D50B6100EEAD2B /* GetPlaceMarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaceMarks.swift; sourceTree = "<group>"; };
 		2DC3CCA923D50DB500EEAD2B /* CarListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewModelTests.swift; sourceTree = "<group>"; };
 		2DC3CCAB23D5125D00EEAD2B /* FindPlaceMarksStatusMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPlaceMarksStatusMock.swift; sourceTree = "<group>"; };
 		2DC3CCB523D520E400EEAD2B /* CarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewController.swift; sourceTree = "<group>"; };
@@ -141,9 +139,18 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		2D4A10F723D7D91300B31129 /* ViewData */ = {
+			isa = PBXGroup;
+			children = (
+				2D4A10F823D7D92600B31129 /* PlaceMarkAnnotation.swift */,
+			);
+			path = ViewData;
+			sourceTree = "<group>";
+		};
 		2D595B0623D661CA00713659 /* CarMap */ = {
 			isa = PBXGroup;
 			children = (
+				2D4A10F723D7D91300B31129 /* ViewData */,
 				2D595B0723D661E400713659 /* CarMapViewController.swift */,
 				2D595B0823D661E400713659 /* CarMapView.swift */,
 				2D595B0923D661E400713659 /* CarMapViewModel.swift */,
@@ -236,6 +243,7 @@
 				2DC3CCBD23D5256C00EEAD2B /* Coordinator.swift */,
 				2DC3CC7B23D48EFE00EEAD2B /* CarList */,
 				2D595B0623D661CA00713659 /* CarMap */,
+				2D4A10F523D7BE8700B31129 /* ViewModelFactory.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -244,7 +252,6 @@
 			isa = PBXGroup;
 			children = (
 				2DC3CC9623D4C56300EEAD2B /* FindPlaceMarksStatus.swift */,
-				2DC3CCA623D50B6100EEAD2B /* GetPlaceMarks.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -333,7 +340,6 @@
 			isa = PBXGroup;
 			children = (
 				2DC3CC8F23D4BEA000EEAD2B /* FindPlaceMarksStatusTests.swift */,
-				2DC3CCA223D4F7E200EEAD2B /* GetPlaceMarksTests.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -344,7 +350,6 @@
 				2DC3CC9423D4C53C00EEAD2B /* PlaceMarksServiceMock.swift */,
 				2DC3CC9823D4C62D00EEAD2B /* PlaceMarksRepositoryMock.swift */,
 				2DC3CCAB23D5125D00EEAD2B /* FindPlaceMarksStatusMock.swift */,
-				2D595B1623D67BA100713659 /* GetPlaceMarksMock.swift */,
 				2D595B1823D67BD100713659 /* CoordinatorMock.swift */,
 			);
 			path = Doubles;
@@ -561,6 +566,7 @@
 				2DC3CC7E23D4901200EEAD2B /* PlaceMarksService.swift in Sources */,
 				2DC3CC3723D26E1E00EEAD2B /* AppDelegate.swift in Sources */,
 				2D595B0B23D661E400713659 /* CarMapViewController.swift in Sources */,
+				2D4A10F923D7D92600B31129 /* PlaceMarkAnnotation.swift in Sources */,
 				2DC3CCA123D4CE2000EEAD2B /* Coordinate.swift in Sources */,
 				2DC3CC8923D4926500EEAD2B /* ApiError.swift in Sources */,
 				2DC3CCBE23D5256C00EEAD2B /* Coordinator.swift in Sources */,
@@ -577,8 +583,8 @@
 				2D595B0C23D661E400713659 /* CarMapView.swift in Sources */,
 				2DC3CC8023D4909200EEAD2B /* PlaceMarks.swift in Sources */,
 				2DC3CCA523D500C000EEAD2B /* DomainError.swift in Sources */,
+				2D4A10F623D7BE8700B31129 /* ViewModelFactory.swift in Sources */,
 				2DC3CCB923D520E400EEAD2B /* CarListViewController.swift in Sources */,
-				2DC3CCA723D50B6100EEAD2B /* GetPlaceMarks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,12 +596,10 @@
 				2DC3CC9523D4C53C00EEAD2B /* PlaceMarksServiceMock.swift in Sources */,
 				2D595B1923D67BD100713659 /* CoordinatorMock.swift in Sources */,
 				2DC3CC9223D4C0D800EEAD2B /* Mock.generated.swift in Sources */,
-				2DC3CCA323D4F7E200EEAD2B /* GetPlaceMarksTests.swift in Sources */,
 				2DC3CC9923D4C62D00EEAD2B /* PlaceMarksRepositoryMock.swift in Sources */,
 				2DC3CC9023D4BEA000EEAD2B /* FindPlaceMarksStatusTests.swift in Sources */,
 				2DC3CCAC23D5125D00EEAD2B /* FindPlaceMarksStatusMock.swift in Sources */,
 				2DC3CCAA23D50DB500EEAD2B /* CarListViewModelTests.swift in Sources */,
-				2D595B1723D67BA100713659 /* GetPlaceMarksMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

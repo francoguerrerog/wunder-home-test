@@ -3,7 +3,7 @@ import MapKit
 import RxSwift
 
 class CarMapViewController: UIViewController {
-    
+   
     private let viewModel: CarMapViewModel
     private lazy var mainView = CarMapView.initFromNib()
     
@@ -22,7 +22,7 @@ class CarMapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupMapView()
         bindViewModel()
         viewModel.viewDidLoad()
@@ -30,6 +30,7 @@ class CarMapViewController: UIViewController {
     
     private func setupMapView() {
         mainView.mapView.delegate = self
+        mainView.mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
     }
 
     private func bindViewModel() {
@@ -37,15 +38,16 @@ class CarMapViewController: UIViewController {
     }
     
     private func bindPlaceMarks() {
-        viewModel.output.placeMarks
-            .subscribe(onNext: { (placemarks) in
-                self.setupAnnotations(placemarks)
+        viewModel.output.placeMark
+            .subscribe(onNext: { (placemark) in
+                self.setupAnnotation(placemark)
             }).disposed(by: disposeBag)
     }
     
-    private func setupAnnotations(_ placemarks: [PlaceMark]) {
+    private func setupAnnotation(_ placeMark: PlaceMark) {
         removeAllAnnotations()
-        placemarks.forEach{ addAnnotation($0) }
+        addAnnotation(placeMark)
+        setNavBarTitle(placeMark.name)
     }
     
     private func removeAllAnnotations() {
@@ -54,27 +56,25 @@ class CarMapViewController: UIViewController {
     }
     
     private func addAnnotation(_ placeMark: PlaceMark) {
-        let annotation = MKPointAnnotation()
-        annotation.title = placeMark.name
-        annotation.coordinate = CLLocationCoordinate2D(latitude: placeMark.coordinates.latitude, longitude: placeMark.coordinates.longitude)
+        let annotationCoordinate = CLLocationCoordinate2D(latitude: placeMark.coordinates.latitude, longitude: placeMark.coordinates.longitude)
+        let annotation = PlaceMarkAnnotation(coordinate: annotationCoordinate, title: placeMark.name, subtitle: placeMark.address)
         mainView.mapView.addAnnotation(annotation)
+        mainView.mapView.setRegion(annotation.region, animated: true)
+    }
+    
+    private func setNavBarTitle(_ title: String) {
+        self.title = title
     }
 }
 
 extension CarMapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        guard annotation is MKPointAnnotation else { return nil }
-
-        let identifier = "Annotation"
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-
-        if annotationView == nil {
-            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-            annotationView!.canShowCallout = true
-        } else {
-            annotationView!.annotation = annotation
+        if let placeMarkAnnotation = mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier) as? MKMarkerAnnotationView {
+            placeMarkAnnotation.animatesWhenAdded = true
+            placeMarkAnnotation.titleVisibility = .adaptive
+            placeMarkAnnotation.subtitleVisibility = .adaptive
         }
-
-        return annotationView
+        
+        return nil
     }
 }

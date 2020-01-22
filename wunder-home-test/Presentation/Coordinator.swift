@@ -3,7 +3,7 @@ import UIKit
 
 protocol Coordinator {
     func goToCarList()
-    func goToCarMap()
+    func goToCarMap(placeMark: PlaceMark)
 }
 
 class CoordinatorDefault {
@@ -30,8 +30,8 @@ class CoordinatorDefault {
         return CarListViewController(viewModel: viewModel)
     }
     
-    private func createCarMapViewController() -> CarMapViewController {
-        let viewModel = ViewModelFactory.createCarMapViewModel()
+    private func createCarMapViewController(_ placeMark: PlaceMark) -> CarMapViewController {
+        let viewModel = CarMapViewModel(placeMark)
         return CarMapViewController(viewModel: viewModel)
         
     }
@@ -49,25 +49,9 @@ extension CoordinatorDefault: Coordinator {
         pushViewController(viewController: viewController)
     }
     
-    func goToCarMap() {
-        let viewController = createCarMapViewController()
+    func goToCarMap(placeMark: PlaceMark) {
+        let viewController = createCarMapViewController(placeMark)
         
         pushViewController(viewController: viewController)
-    }
-}
-
-class ViewModelFactory {
-    
-    private static let placeMarksService = ApiPlaceMarksService()
-    private static let placeMarksRepository = InMemoryPlaceMarksRepository()
-        
-    public static func createCarListViewModel(_ coordinator: Coordinator) -> CarListViewModel {
-        let findPlacesMarks = FindPlaceMarksStatusDefault(placeMarksService, placeMarksRepository)
-        return CarListViewModel(coordinator, findPlacesMarks)
-    }
-    
-    public static func createCarMapViewModel() -> CarMapViewModel {
-        let getPlaceMarks = GetPlaceMarksDefault(placeMarksRepository)
-        return CarMapViewModel(getPlaceMarks)
     }
 }
